@@ -1,0 +1,208 @@
+/* Footer section styles */
+.footer {
+  background-color: $very-dark-cyan;
+  color: #fff;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: rem(112px);
+    bottom: 100%;
+    background: url('../images/bg-footer-top-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: center right 10%;
+    background-size: cover;
+
+    @include breakpoint(medium) {
+      background-position: center;
+      height: rem(165px);
+    }
+  }
+
+  .container {
+    padding-top: rem(55px);
+    padding-bottom: rem(46px);
+
+    @include breakpoint(large) {
+      padding-top: rem(115px);
+      padding-bottom: rem(103px);
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  &__newsletter {
+    align-items: flex-start;
+    margin-bottom: rem(104px);
+
+    @include breakpoint(large) {
+      margin-bottom: 0;
+      align-self: flex-start;
+      order: 2;
+    }
+
+    &-title {
+      font-size: clamp(rem(20px), 2vw, rem(24px));
+      font-weight: 600;
+      margin-bottom: rem(16px);
+    }
+
+    &-description {
+      font-weight: 600;
+      line-height: 1.7;
+      max-width: rem(320px);
+      margin-bottom: rem(32px);
+
+      @include breakpoint(large) {
+        max-width: rem(344px);
+        margin-bottom: rem(40px);
+      }
+    }
+  }
+
+  &__form {
+    @include breakpoint(large) {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+  }
+
+  &__form-control {
+    align-items: flex-start;
+    margin-bottom: rem(16px);
+
+    @include breakpoint(large) {
+      margin-bottom: 0;
+      margin-right: rem(40px);
+    }
+
+    input[type='email'] {
+      color: $very-dark-cyan;
+      width: rem(320px);
+      height: rem(48px);
+      border-radius: rem(6px);
+      padding: rem(12px);
+      outline: none;
+    }
+
+    span {
+      font-size: rem(12px);
+      font-weight: 600;
+      color: $light-red;
+      line-height: 2;
+      opacity: 0;
+
+      @include breakpoint(large) {
+        font-size: rem(14px);
+      }
+    }
+  }
+
+  .error {
+    input {
+      border-radius: rem(6px);
+      border: 1px solid $light-red;
+    }
+  }
+
+  &__btn {
+    font-size: rem(16px);
+    font-weight: 700;
+    width: rem(160px);
+    height: rem(48px);
+    padding: rem(12px);
+    border-radius: rem(5px);
+    align-self: flex-end;
+
+    @include breakpoint(large) {
+      align-self: flex-start;
+
+      &:hover {
+        background-color: $light-pink;
+      }
+    }
+  }
+
+  &__info {
+    align-items: flex-start;
+
+    @include breakpoint(large) {
+      order: 1;
+    }
+  }
+
+  &__details {
+    margin-bottom: rem(48px);
+
+    @include breakpoint(large) {
+      margin-bottom: rem(80px);
+    }
+
+    &-1 {
+      margin-bottom: rem(40px);
+
+      @include breakpoint(large) {
+        margin-bottom: rem(24px);
+      }
+    }
+
+    &-description {
+      font-weight: 600;
+      line-height: 1.7;
+      max-width: rem(320px);
+      margin-bottom: rem(32px);
+
+      @include breakpoint(large) {
+        max-width: rem(340px);
+        margin-bottom: rem(40px);
+      }
+    }
+
+    &-phone {
+      margin-bottom: rem(16px);
+    }
+    &-phone,
+    &-email {
+      display: flex;
+      align-items: center;
+
+      p {
+        margin-left: rem(16px);
+      }
+    }
+  }
+
+  &__logo {
+    width: rem(200px);
+    margin-bottom: rem(16px);
+
+    @include breakpoint(large) {
+      width: rem(240px);
+      margin-bottom: rem(27px);
+    }
+  }
+
+  &__social {
+    a {
+      &:not(:last-child) {
+        margin-right: rem(17px);
+
+        @include breakpoint(large) {
+          margin-right: rem(24px);
+        }
+      }
+
+      .fa {
+        font-size: rem(23px);
+        color: #fff;
+        transition: all 200ms ease-in;
+
+        &:hover {
+          color: #00c7fa;
+        }
+      }
+    }
+  }
+}

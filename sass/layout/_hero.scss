@@ -1,0 +1,35 @@
+/* Hero section styles */
+.hero {
+  margin-bottom: rem(120px);
+
+  &__title {
+    margin-bottom: rem(24px);
+
+    @include breakpoint(medium) {
+      margin-bottom: 26px;
+    }
+  }
+
+  &__description {
+    font-size: clamp(rem(14px), 2vw, rem(20px));
+    margin-bottom: rem(49px);
+
+    @include breakpoint(medium) {
+      max-width: rem(600px);
+    }
+  }
+
+  &__image {
+    width: 100%;
+    margin-top: rem(100px);
+
+    @include breakpoint(medium) {
+      max-width: rem(720px);
+    }
+
+    @include breakpoint(large) {
+      max-width: rem(1016px);
+      margin-top: rem(120px);
+    }
+  }
+}

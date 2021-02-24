@@ -1,0 +1,19 @@
+/* call-to-action section styles */
+.cta {
+  margin-bottom: rem(360px);
+
+  @include breakpoint(large) {
+    margin-bottom: rem(458px);
+  }
+
+  &__title {
+    font-size: clamp(rem(24px), 3vw, rem(40px));
+    margin-bottom: rem(40px);
+    max-width: rem(344px);
+
+    @include breakpoint(medium) {
+      max-width: rem(684px);
+      margin-bottom: rem(42px);
+    }
+  }
+}

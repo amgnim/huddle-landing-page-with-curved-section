@@ -1,0 +1,61 @@
+body {
+  font-family: $font-body;
+  font-weight: 400;
+  font-size: rem(14px);
+  color: $very-dark-cyan;
+  line-height: 1.5;
+}
+
+h1,
+h2 {
+  font-family: $font-heading;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(rem(24px), 3.5vw, rem(48px));
+}
+
+h2 {
+  font-size: clamp(rem(20px), 3vw, rem(40px));
+}
+
+/* Container utility class */
+.container {
+  max-width: 75rem;
+  margin: 0 auto;
+
+  &--padding-x {
+    padding: 0 rem(24px);
+  }
+}
+
+/* FLex Styles */
+.flex {
+  display: flex;
+  align-items: center;
+
+  &-fd-c {
+    flex-direction: column;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+}
+
+/* Grid Styles*/
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+}
+
+/* text-center class */
+.text-center {
+  text-align: center;
+}

@@ -1,0 +1,22 @@
+/* Header section styles */
+.header {
+  padding-top: rem(24px);
+  margin-bottom: rem(115px);
+
+  @include breakpoint(medium) {
+    padding-top: rem(78px);
+    margin-bottom: rem(225px);
+  }
+
+  &__logo {
+    width: rem(100px);
+
+    @include breakpoint(medium) {
+      width: rem(239px);
+    }
+  }
+
+  &__btn {
+    font-size: clamp(rem(12px), 2vw, rem(16px));
+  }
+}

@@ -1,0 +1,171 @@
+/* Feature section styles*/
+/* features component base styles */
+.features {
+  .grid {
+    @include breakpoint(large) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: rem(130px);
+      align-items: center;
+    }
+  }
+
+  &--bg-blue {
+    background-color: $very-pale-blue;
+  }
+
+  &__image {
+    width: 100%;
+    margin-bottom: rem(40px);
+
+    @include breakpoint(medium) {
+      max-width: rem(560px);
+    }
+
+    @include breakpoint(large) {
+      margin-bottom: 0;
+
+      &--order-2 {
+        order: 2;
+      }
+    }
+  }
+
+  &__text {
+    @include breakpoint(large) {
+      text-align: left;
+      align-items: flex-start;
+
+      &--order-1 {
+        order: 1;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(16px);
+
+    @include breakpoint(medium) {
+      margin-bottom: rem(26px);
+    }
+  }
+
+  &__description {
+    max-width: rem(420px);
+
+    @include breakpoint(medium) {
+      font-size: rem(16px);
+      max-width: rem(520px);
+    }
+  }
+}
+
+/* Grow together feature styles*/
+.feature-1 {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: rem(112px);
+    bottom: 100%;
+    background: url('../images/bg-section-top-desktop-1.svg');
+    background-repeat: no-repeat;
+    background-position: center left 30%;
+    background-size: cover;
+
+    @include breakpoint(medium) {
+      background-position: center;
+      height: rem(165px);
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: rem(52px);
+    top: 100%;
+    background: url(../images/bg-section-bottom-desktop-1.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @include breakpoint(medium) {
+      height: rem(139px);
+    }
+  }
+
+  .container {
+    padding-top: rem(82px);
+    padding-bottom: rem(50px);
+    margin-bottom: rem(129px);
+
+    @include breakpoint(small) {
+      padding-top: rem(68px);
+      padding-bottom: rem(45px);
+      margin-bottom: rem(308px);
+    }
+  }
+}
+
+/* Flowing conversations feature styles*/
+.feature-2 {
+  .container {
+    margin-bottom: rem(239px);
+
+    @include breakpoint(medium) {
+      margin-bottom: rem(309px);
+    }
+  }
+}
+
+/* Your users feature section */
+.feature-3 {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: rem(103px);
+    bottom: 100%;
+    background: url('../images/bg-section-top-desktop-2.svg');
+    background-repeat: no-repeat;
+    background-position: center left 30%;
+    background-size: cover;
+
+    @include breakpoint(medium) {
+      background-position: center;
+      height: rem(156px);
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: rem(101px);
+    top: 100%;
+    background: url(../images/bg-section-bottom-desktop-2.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include breakpoint(medium) {
+      height: rem(139px);
+    }
+  }
+
+  .container {
+    padding-top: rem(10px);
+    padding-bottom: rem(113px);
+    margin-bottom: rem(129px);
+
+    @include breakpoint(small) {
+      padding-top: rem(36px);
+      padding-bottom: rem(36px);
+      margin-bottom: rem(308px);
+    }
+  }
+}

@@ -1,0 +1,15 @@
+// Breakpoints
+
+//larger than 600px 992px 1200px
+$breakpoint: (
+  'small': '23.5rem',
+  'medium': '37.5rem',
+  'large': '62rem',
+  'xlarge': '75rem',
+);
+
+@mixin breakpoint($size) {
+  @media screen and (min-width: map-get($breakpoint , $size )) {
+    @content;
+  }
+}

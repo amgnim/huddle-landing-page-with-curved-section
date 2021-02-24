@@ -1,0 +1,41 @@
+/* Stats section styles */
+.stats {
+  margin-bottom: rem(120px);
+
+  @include breakpoint(large) {
+    margin-bottom: rem(263px);
+  }
+
+  .container {
+    align-items: center;
+
+    @include breakpoint(large) {
+      flex-direction: row;
+      justify-content: space-between;
+      max-width: rem(880px);
+      margin: 0 auto;
+    }
+  }
+
+  &__card {
+    margin-bottom: rem(88px);
+
+    @include breakpoint(large) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__icon {
+    align-self: flex-start;
+  }
+
+  &__title {
+    font-size: clamp(rem(60px), 7vw, rem(96px));
+    font-weight: 700;
+  }
+
+  &__description {
+    font-size: clamp(rem(16px), 4vw, rem(24px));
+    color: #808e9a;
+  }
+}
